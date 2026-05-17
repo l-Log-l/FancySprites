@@ -1,0 +1,36 @@
+package ai.log.fsprites.client.sprite;
+
+/**
+ * Represents the anchor point for sprite positioning and transformation.
+ * The anchor defines where the sprite is positioned relative to its reference point.
+ */
+public enum SpriteAnchor {
+    TOP_LEFT(0, 0),
+    TOP(0.5f, 0),
+    TOP_RIGHT(1, 0),
+    LEFT(0, 0.5f),
+    CENTER(0.5f, 0.5f),
+    RIGHT(1, 0.5f),
+    BOTTOM_LEFT(0, 1),
+    BOTTOM(0.5f, 1),
+    BOTTOM_RIGHT(1, 1);
+
+    public final float x;
+    public final float y;
+
+    SpriteAnchor(float x, float y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    public static SpriteAnchor fromString(String name) {
+        if (name == null) {
+            return TOP_LEFT;
+        }
+        try {
+            return SpriteAnchor.valueOf(name.toUpperCase().replace("-", "_"));
+        } catch (IllegalArgumentException e) {
+            return TOP_LEFT;
+        }
+    }
+}

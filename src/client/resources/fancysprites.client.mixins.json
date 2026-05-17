@@ -1,0 +1,17 @@
+{
+	"required": true,
+	"package": "ai.log.fsprites.client.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"client": [
+		"ExampleClientMixin",
+		"ContainerScreenMixin",
+		"GuiMixin",
+		"PauseScreenMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}

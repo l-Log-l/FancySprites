@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "fancysprites",
+	"version": "${version}",
+	"name": "FancySprites",
+	"description": "Client-side mod for custom animated sprites in GUI and HUD.",
+	"authors": [
+		"Log"
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/project/fancysprites",
+		"sources": "https://github.com/FabricMC/fabric-example-mod",
+		"discord": "https://discord.gg/pGfZRMHeMx"
+	},
+	"license": "MIT",
+	"icon": "assets/fancysprites/icon.png",
+	"environment": "client",
+	"accessWidener": "fancysprites.accesswidener",
+	"entrypoints": {
+		"main": [
+			"ai.log.fsprites.FancySprites"
+		],
+		"client": [
+			"ai.log.fsprites.client.FancySpritesClient"
+		]
+	},
+	"mixins": [
+		"fancysprites.mixins.json",
+		{
+			"config": "fancysprites.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.0",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
