@@ -275,32 +275,6 @@ SpriteRenderer.renderSprite(
 );
 ```
 
-## Directory Structure
-
-```
-Your Mod/
-├── src/
-│   ├── main/
-│   │   └── resources/
-│   │       └── assets/fsprite/
-│   │           ├── textures/
-│   │           │   ├── my-sprite/
-│   │           │   │   ├── 0.png
-│   │           │   │   ├── 1.png
-│   │           │   │   └── ...
-│   │           │   └── other-sprite/
-│   │           │       ├── 0.png
-│   │           │       └── ...
-│   │           ├── my-sprite.mcmeta
-│   │           └── other-sprite.mcmeta
-│   └── client/
-│       └── java/
-│           └── com/yourname/yourmod/
-│               └── client/
-│                   └── YourModClient.java
-```
-
-## Examples
 
 ### Static Overlay Badge
 
